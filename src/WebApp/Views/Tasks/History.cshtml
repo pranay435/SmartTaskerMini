@@ -1,0 +1,35 @@
+@model List<SmartTaskerMini.Core.Domain.HistoryItem>
+@{
+    ViewData["Title"] = "Task History";
+}
+
+<h2>Completed Tasks</h2>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Created</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Title</td>
+                    <td>@item.CreatedDate.ToString("MMM dd, yyyy")</td>
+                    <td>@item.CompletedDate.ToString("MMM dd, yyyy HH:mm")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No completed tasks found.</p>
+}
+
+<a href="/Tasks" class="btn btn-primary">Back to Tasks</a>

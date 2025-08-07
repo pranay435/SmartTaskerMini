@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Reports";
+}
+
+<h2>Daily Productivity Report</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+
+<form method="post" asp-action="DailyReport">
+    <div class="mb-3">
+        <label for="date" class="form-label">Select Date</label>
+        <input type="date" name="date" class="form-control" value="@DateTime.Today.ToString("yyyy-MM-dd")" required />
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Generate Report</button>
+</form>
+
+<a href="/Tasks" class="btn btn-secondary mt-3">Back to Tasks</a>

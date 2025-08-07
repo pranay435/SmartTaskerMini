@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Tasks>
+  <Task>
+    <Id>1</Id>
+    <Title>setup virtual machine</Title>
+    <DueUtc>2025-08-01T13:40:45.3727842+05:30</DueUtc>
+    <Priority>3</Priority>
+    <Status>Pending</Status>
+    <Score>241</Score>
+  </Task>
+  <Task>
+    <Id>2</Id>
+    <Title>write script sync the files</Title>
+    <DueUtc>2025-08-01T13:40:59.4259509+05:30</DueUtc>
+    <Priority>5</Priority>
+    <Status>Pending</Status>
+    <Score>441</Score>
+  </Task>
+</Tasks>
